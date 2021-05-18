@@ -1,21 +1,35 @@
 public class Savings extends Account
-
-float interest;
-
-Savings(int no,float i)
-
-   super(no);
-
-   interest = i;
-
-public void getAccno()
-
-   System.out.println(\n\nSaving Account Information);
-
-   System.out.println(\nAccount number is : +accno);
-
-public void getBal()
-
-   System.out.println(\nThe balance is : +accbal);
-
-   System.out.println(\nThe rate of interest is : +interest+%);
+{
+	private double interestRate;
+	
+	public Savings(int accountNumber, double interest)
+	{
+		super(accountNumber);
+		setInterestRate(interest);
+	}
+	
+	public void setInterestRate(double interest)
+	{
+		interestRate = interest;
+	}
+	public double getInterestRate()
+	{
+		return interestRate;
+	}
+	
+	public int getAccountNumber()
+	{
+		return accountNumber;
+	}
+	
+	public double getBalance()
+	{
+		return balance;
+	}
+	
+	
+	public String getAccountInfo()
+	{
+		return("Savings Account Information\nAccount Number: " + getAccountNumber() + "\nBalance: " + getBalance() + "\nInterest Rate: " + getInterestRate() + "%");
+	}
+}
